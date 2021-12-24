@@ -15,7 +15,7 @@ function posAcao() {
 }
 
 function limpar(){
-  let palavras = ["merda", "porra", "corno", "corna", "puto", "puta", "caralho", "desgraça", "imbecil", "idiota"];
+  let palavras = ["merda", "porra", "corno", "corna", "puto", "puta", "caralho", "desgraça", "imbecil", "idiota", "viado"];
   let palavra = new RegExp(palavras.join("|") , "gi");
   texto = document.getElementById("text").value;
   resultado = texto.replace(palavra, "***");

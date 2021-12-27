@@ -80,3 +80,12 @@ footer {
 #characters {
   color: red;
 }
+
+#res {
+  float: left;
+}
+
+.verde{
+  color: #2BDBA1;
+  float: left;
+}

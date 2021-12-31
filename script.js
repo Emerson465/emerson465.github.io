@@ -28,21 +28,29 @@ function countPalavroes() {
   var str = document.getElementById("text").value;
   var count = (str.match(palavra) || []).length;
   console.log(count);
+  if (count != 0){
   document.getElementById("res").innerText = count + " palavrões ";
   document.getElementById("countPalavroes").style.display = "block";
+  }
+  return(count);
+  
 }
 
 function acao() {
 
-  countPalavroes();
-
-  if (document.getElementById("botao").innerText === "Limpar outra frase") {
-    document.location.reload(true);
+  if (countPalavroes() == 0) {
+    alert("Sua frase já está limpinha ;)");
   }
   else {
-    limpar();
+    countPalavroes();
+    if (document.getElementById("botao").innerText === "Limpar outra frase") {
+      document.location.reload(true);
+    }
+    else {
+      limpar();
+    }
+
+    posAcao();
+
   }
-
-  posAcao();
-
 }

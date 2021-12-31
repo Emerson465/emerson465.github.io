@@ -37,16 +37,16 @@ function countPalavroes() {
 }
 
 function acao() {
-
-  if (countPalavroes() == 0) {
-    alert("Sua frase já está limpinha ;)");
+  if (document.getElementById("botao").innerText === "Limpar outra frase") {
+    document.location.reload(true);
   }
   else {
-    countPalavroes();
-    if (document.getElementById("botao").innerText === "Limpar outra frase") {
-      document.location.reload(true);
+
+    if (countPalavroes() == 0) {
+    alert("Sua frase já está limpinha ;)");
     }
     else {
+      countPalavroes();
       limpar();
     }
 
